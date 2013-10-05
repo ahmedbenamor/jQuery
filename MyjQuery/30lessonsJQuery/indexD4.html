@@ -1,0 +1,52 @@
+<html>
+<head>
+	<meta charset=utf-8 />
+	<title>jQery EVENTS</title>
+	<link rel="stylesheet">
+
+</head>
+<body>
+<div>My web Site</div>
+</br>
+<button data-ahmed="night">NIGHT</button>
+<button data-ahmed="day">DAY</button>
+
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript">
+	(function(){
+		$('button').click(function(){
+			//var stylesheet = $(this).text().toLowerCase();
+			var stylesheet = $(this).data('ahmed');
+			var $this = $(this);
+			//console.log(stylesheet):
+			$('link').attr('href', stylesheet + '.css');
+			
+			/*
+			$this
+				.siblings('button')
+				.removeAttr('disabled');
+
+			$this.attr('disabled', 'disabled');
+
+			Autre méthode
+             */
+
+			$this
+				.siblings('button')
+				.removeAttr('disabled')
+				.end() //retourner au siblings
+			    .attr('disabled', 'disabled'); // ajouter l'aaribut disabled
+
+
+
+			/*
+          if($(this).text() == 'NIGHT')
+			$('link').attr('href', 'night.css');
+		else
+			$('link').attr('href', 'day.css');
+		*/
+		});
+	})();
+</script>
+</body>
+</html>

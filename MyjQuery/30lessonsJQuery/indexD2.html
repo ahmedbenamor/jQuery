@@ -1,0 +1,44 @@
+<html>
+<head>
+	<script type="text/javascript" src="../jquery.js"></script>
+	<title></title>
+	<style type="text/css">
+.emphasis{
+	font-weight: bold;
+}
+
+	</style>
+
+<script>
+
+
+/* 1 ère méthode
+$(document).ready(function(){
+	$('li:first-child').addClass('emphasis');
+});
+
+**********************************************
+2 ème méthode
+var myFunctio = function(){
+$('li:first-child').addClass('emphasis');
+};
+$(document).ready(myFunctio);
+
+****************************************
+*/
+$(function(){
+	$('li:first-child').addClass('emphasis');
+})
+	
+</script>
+</head>
+<body>
+<ul>
+	<li>hello1</li>
+	<li>hello2</li>
+	<li>hello3</li>
+</ul>
+
+
+</body>
+</html>

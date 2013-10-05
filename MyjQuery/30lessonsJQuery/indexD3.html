@@ -1,0 +1,61 @@
+<html>
+<head>
+	<title>jquery Day 3</title>
+    <meta charset=utf-8/>
+    <style type="text/css">
+
+      
+      /* 
+      li {
+      	color: black;
+      }
+      ul.emphasis  li {
+      	color: red;
+      }
+     */
+
+     .emphasis{
+     	color: green;
+     }
+       .container {
+     	color: blue;
+     }
+    </style>
+</head>
+<body>
+<div class="container">
+	<h1>Welcom to my site</h1>
+	<p>
+		Layout creates a border layout that has auto-sizing 'center pane' surrounded by<br/> up to four closable anbilities are unlimited - from simple fixed headers or <br/>sidebars to rich applications. Each layout<br/> pane can be closed, opened and resized, <br/>within automatic or specified limits. You can use layout either for an entire page (fill page layout)<br/> or for a specific region in the page (element layout). <br/>Furthermore, any custom content can be placed between layout<br/> panes. There are also client-side and server-side state management. 
+	</p>
+	<ul class="emphasis">
+		<li>hello1</li>
+		<li>hello2</li>
+		<li>hello3</li>
+		<li>
+			<ul>
+				<li>hello4</li>
+			</ul>
+		</li>
+		<li>hello5</li>
+	</ul>
+
+</div>
+
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript">
+
+//$('ul.emphasis').children('li').css('color', 'green');
+//$('ul.emphasis').find('li').addClass('emphasis');
+//$('ul.emphasis').find('li:first-child').addClass('emphasis');
+//$('ul.emphasis').children('li:first-child').addClass('emphasis');
+//$('ul.emphasis').find('li:nth-child(1)').addClass('emphasis');
+//$('ul.emphasis').children('li:first-child').text('addet with jquery');
+//$('ul.emphasis').children('li').eq(3).children('ul').eq(0).children('li:first-child').text('ajouter avec jquery');
+//$('ul.emphasis').children('li').eq(2).next().children('ul').eq(0).children('li:first-child').text('ajouter avec jquery');
+//$('ul.emphasis').children('li').eq(4).prev().children('ul').eq(0).children('li:first-child').text('ajouter avec jquery');
+//$('li').parents('div.container').removeClass('container');
+$('li').closest('div.container').removeClass('container');
+</script>
+</body>
+</html>
