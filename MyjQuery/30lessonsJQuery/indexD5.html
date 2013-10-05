@@ -1,0 +1,63 @@
+<html>
+<head>
+	<title>jQuery events 201</title>
+	<meta charset=utf-8 />
+	<link rel="stylesheet" href="styleD5.css">
+
+
+</head>
+<body>
+
+	<dl>
+		<dt>Prénom :</dt>
+		<dd>Ahmed</dd>
+		<dt>Nom :</dt>
+		<dd>Benamor</dd>
+		<dt>Pays :</dt>
+		<dd>Tunisie</dd>
+		<dt>Num Tél :</dt>
+		<dd>+216 52 31 32 73</dd>
+		<dt>E-mail</dt>
+		<dd>ahmed.ben.amor87@gmail.com</dd>
+	</dl>
+
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript">
+	(function(){
+		var dd = $('dd');
+		//console.log('dd : '+dd.text())
+		var filter = dd.filter(':nth-child(n+4)')
+		filter.addClass('hide');
+		//console.log('filter : '+filter.text());
+		
+		$('dl').on('mouseenter','dt', function(){
+            //$(this).siblings('dd').addClass('hide');
+            //$(this).next().removeClass('hide');
+            $(this)
+            .next()
+            .show()
+            .siblings('dd')
+            //.hide();
+            .slideUp(500);
+
+		})
+        //filter.addClass('hide');
+
+
+		//dd.addClass('hide');
+		/*
+		$('dt').click(function(){
+			var cc = $(this).next();
+			console.log(cc);
+			cc.hide();
+
+		});
+*/
+		
+	}
+
+		)()
+</script>
+</body>
+
+</html>
